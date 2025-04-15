@@ -1,135 +1,128 @@
 import React from "react";
 import img1 from "../../assets/img/about/about-1.jpg";
-import img4 from "../../assets/img/about/about-4.svg";
 import img2 from "../../assets/img/about/about-2.jpg";
 import img3 from "../../assets/img/about/about-3.jpg";
+import img4 from "../../assets/img/about/about-4.svg";
+import edu from "../../assets/img/about/edu.svg";
+import global from "../../assets/img/about/global-education.svg";
+
 import { FiBookOpen } from "react-icons/fi";
-import { FaQuoteRight } from "react-icons/fa";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { FaArrowRightLong, FaQuoteRight } from "react-icons/fa6";
 import { RiCustomerService2Line } from "react-icons/ri";
-
-
-
-
-import edu from "../../assets/img/about/edu.svg"
-import gobal from "../../assets/img/about/global-education.svg"
 
 const About = () => {
   return (
-    <div className="w-full md:w-[1200px] md:mx-auto mt-5  md:flex gap-10">
-      {/* left side  */}
-      <div className="flex flex-col md:flex-row  mx-36 md:mx-0 gap-5">
-        {/* side-1 */}
-        <div>
+    <div className="w-full max-w-[1200px] mx-auto px-4 md:px-0 mt-10 flex flex-col md:flex-row gap-10">
+      {/* Left Side */}
+      <div className="flex flex-col md:flex-row gap-6 w-full md:w-1/2 items-center md:items-start">
+        {/* Main Image */}
+        <div className="space-y-5">
           <img
             src={img1}
-            alt=""
-            className="h-[400px] rounded-t-full rounded-b-full rounded-br-lg"
+            alt="Main"
+            className="w-full rounded-lg md:rounded-t-full md:rounded-b-full md:rounded-br-lg"
           />
-          <div className="flex items-center gap-2 bg-[#FDA31B] w-[270px] py-5 px-3 mt-5 rounded-full rounded-bl-lg">
-            <img src={img4} alt="" className="w-20 bg-white rounded-full" />
-            <p className="text-xl text-white font-semibold">
+          <div className="flex items-center gap-2 bg-[#FDA31B] py-4 px-3 rounded-full md:w-[270px]">
+            <img
+              src={img4}
+              alt="Service icon"
+              className="w-14 h-14 bg-white rounded-full p-2"
+            />
+            <p className="text-white font-semibold text-sm sm:text-base">
               30 Years Of Quality Service
             </p>
           </div>
         </div>
-        {/* side-2 */}
-        <div className="space-y-5">
-          <div className="border-2 border-[#FDA31B] border-dashed  rounded-full py-2 px-3 w-[250px]">
-            <img src={img2} alt="" className="rounded-full w-[250px]" />
+
+        {/* Side Images */}
+        <div className="space-y-5 ">
+          <div className="border-2 border-[#FDA31B] border-dashed rounded-full py-2 px-3 w-full md:w-[250px]">
+            <img src={img2} alt="Side 1" className="rounded-full w-full" />
           </div>
           <img
             src={img3}
-            alt=""
+            alt="Side 2"
             className="h-[400px] rounded-full rounded-tl-lg"
           />
         </div>
       </div>
 
-      {/* right side */}
-      <div className="space-y-10 px-10 md:px-0 ">
-        <div className="flex items-center gap-2 border-b-4 border-[#FDA31B] w-28">
+      {/* Right Side */}
+      <div className="w-full md:w-1/2 space-y-10">
+        {/* Header */}
+        <div className="flex items-center gap-2 border-b-4 border-[#FDA31B] w-fit">
           <FiBookOpen className="text-[#FDA31B]" />
           <h3 className="font-semibold text-[#FDA31B] text-xl">About Us</h3>
         </div>
-        <div className="space-y-3">
-          <p className="text-5xl text-[#19232B] font-bold">
-            Our Edukation System{" "}
-            <span className="text-[#FDA31B]">Inspires</span> You More.
-          </p>
-          <p>
-            There are many variations of passages available but the majority
-            have suffered alteration in some form by injected humour randomised
-            words which don't look even slightly believable. If you are going to
-            use passage.
-          </p>
-          <div className="md:flex ">
-            <div className="gap-2 space-y-4">
-            <div className="flex gap-2">
-                
 
-                <img src={edu} alt="" className="w-18 mx-auto  bg-white rounded-full border-[12px] border-[#FDA31B]"/>
-                
-               
+        {/* Text Content */}
+        <div className="space-y-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#19232B]">
+            Our Education System <span className="text-[#FDA31B]">Inspires</span> You More.
+          </h2>
+          <p className="text-gray-600">
+            There are many variations of passages available, but the majority
+            have suffered alteration in some form by injected humour or
+            randomised words which don't look even slightly believable.
+          </p>
+
+          {/* Services & Quote */}
+          <div className="flex flex-col md:flex-row gap-6">
+            <div className="space-y-6 w-full">
+              {/* Service 1 */}
+              <div className="flex items-start gap-3">
+                <img
+                  src={edu}
+                  alt="Edu"
+                  className="w-16 h-16 bg-white rounded-full border-[8px] border-[#FDA31B]"
+                />
                 <div>
-                  <h1 className="font-semibold text-xl">Edukation Services</h1>
-                  <p>
-                    It is a long established fact that reader will to using
-                    content.
+                  <h4 className="font-semibold text-lg">Education Services</h4>
+                  <p className="text-sm text-gray-600">
+                    Quality content benefits the reader over time.
                   </p>
                 </div>
               </div>
-            <div className="flex gap-2">
-                
 
-                <img src={gobal} alt="" className="w-18 mx-auto  bg-white rounded-full border-[12px] border-[#FDA31B]"/>
-                
-               
+              {/* Service 2 */}
+              <div className="flex items-start gap-3">
+                <img
+                  src={global}
+                  alt="Global"
+                  className="w-16 h-16 bg-white rounded-full border-[8px] border-[#FDA31B]"
+                />
                 <div>
-                  <h1 className="font-semibold text-xl">Edukation Services</h1>
-                  <p>
-                    It is a long established fact that reader will to using
-                    content.
+                  <h4 className="font-semibold text-lg">Global Education</h4>
+                  <p className="text-sm text-gray-600">
+                    Education reaches all corners of the globe.
                   </p>
                 </div>
               </div>
-              
             </div>
-              
-            <div className="w-full md:w-[350px]  mt-5 md:mt-0">
-              <div className="bg-[#EAF2F1] px-5 py-8 relative">
-                <p>It is a long established fact that a reader will be distracted by the content of a page when looking at its reader for the long words layout.</p>
-                <div className="absolute right-2 -bottom-4">
-              <FaQuoteRight className="text-[#116E63] text-4xl"/>
 
-              </div>
-              </div>
-              
+            {/* Quote */}
+            <div className="bg-[#EAF2F1] px-5 py-6 relative rounded-md w-full">
+              <p className="text-gray-700">
+                A reader will be distracted by the content of a page when looking at its layout.
+              </p>
+              <FaQuoteRight className="text-[#116E63] text-3xl absolute bottom-3 right-3" />
             </div>
           </div>
         </div>
-        <div className="border-t border-[#d1c7c7] ">
-          <div className="mt-5 flex items-center justify-between md:justify-start gap-10 ">
-            <button className="bg-[#FDA31B] px-3 py-4 flex items-center gap-2 text-white font-semibold rounded-full rounded-bl-lg hover:bg-[#116E63]">
-            Discover More
-            <FaArrowRightLong />
 
-             
-            </button>
-            <div className="flex gap-3">
-            <RiCustomerService2Line  className="text-5xl bg-[#116E63] text-white border-8 border-[#116E63]  rounded-full"/>
-            <div className="">
-           <p className="text-[#FDA31B] font-semibold">Call Now
-           </p>
-           <h3 className="text-[#116E63] font-bold">+22 08 65 8 46</h3>
+        {/* CTA Section */}
+        <div className="pt-5 border-t border-gray-300 flex flex-col sm:flex-row gap-6 sm:items-center sm:justify-between">
+          <button className="bg-[#FDA31B] hover:bg-[#116E63] text-white px-6 py-3 rounded-full rounded-bl-lg font-semibold flex items-center gap-2 transition duration-300">
+            Discover More <FaArrowRightLong />
+          </button>
 
-
-            </div>
-
-
+          <div className="flex items-center gap-4">
+            <RiCustomerService2Line className="text-4xl bg-[#116E63] text-white p-2 rounded-full" />
+            <div>
+              <p className="text-[#FDA31B] font-semibold text-sm">Call Now</p>
+              <h3 className="text-[#116E63] font-bold text-lg">+22 08 65 8 46</h3>
             </div>
           </div>
-
         </div>
       </div>
     </div>
